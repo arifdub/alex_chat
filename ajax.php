@@ -12,9 +12,9 @@ else if($type == 'checkstatus'){
     checkQuestionStatus();
 }
 
-else if($type == 'getAnswer'){
+else if($type == 'gotAnswer'){
     
-    getAnswer();
+    gotAnswer();
 }
 
 
@@ -23,9 +23,9 @@ function checkQuestionStatus(){
     // database connection
       try {
         $host = '127.0.0.1';
-        $dbname = 'iwaca';
+        $dbname = 'test';
         $user = 'root';
-        $pass = '';
+        $pass = 'doa24710';
         # MySQL with PDO_MYSQL
         $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     } catch(PDOException $e) {echo $e;}  
@@ -44,14 +44,14 @@ function checkQuestionStatus(){
     
 }
 
-function getAnswer(){
+function gotAnswer(){
     
     // database connection
       try {
         $host = '127.0.0.1';
-        $dbname = 'test';
+        $dbname = 'test';  
         $user = 'root';
-        $pass = '';
+        $pass = 'doa24710';
         # MySQL with PDO_MYSQL
         $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     } catch(PDOException $e) {echo $e;}  
@@ -77,9 +77,9 @@ function submitNewQuestion(){
     // database connection
       try {
         $host = '127.0.0.1';
-        $dbname = 'iwaca';
+        $dbname = 'test';
         $user = 'root';
-        $pass = '';
+        $pass = 'doa24710';
         # MySQL with PDO_MYSQL
         $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     } catch(PDOException $e) {echo $e;}  
@@ -87,7 +87,7 @@ function submitNewQuestion(){
 
     
    
-    $q = $DBH->prepare("INSERT INTO `iwaca`.`iwa2016` (`name`, `question`) VALUES (:name, :question);");
+    $q = $DBH->prepare("INSERT INTO `test`.`iwa2016` (`name`, `question`) VALUES (:name, :question);");
     $q->bindValue(':name',  $name);
     $q->bindValue(':question',  $question);
     $q->execute();

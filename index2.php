@@ -17,6 +17,7 @@
 	function sendToDatabase(){
 
 		$.get("https://api.xmltime.com/timeservice?accesskey=6jufFqFitK&expires=2016-05-22T21%3A46%3A27%2B00%3A00&signature=rQAEL0FS9IVcNarGyeg1dDDx98A%3D&version=2&placeid=norway%2Foslo&geo=0&sun=0&timechanges=0&tz=0&verbosetime=0")
+}
 </script>
 
 
