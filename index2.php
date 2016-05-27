@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   
 		
 </head>		
@@ -72,10 +74,9 @@ $( "#hiddendiv" ).show();
 
 // start the timer to check for an answer
 setInterval(function(){ checkForAnswer(); }, 3000);
-
 }
-</script>
 
+</script>
 
    
 	<h1>Chat App - IWACA - Alex Doyle - 2015713</h1>
