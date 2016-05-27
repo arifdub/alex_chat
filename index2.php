@@ -17,15 +17,25 @@
 		
 <script>
 	function sendToDatabase(){
+	
+		$.get("http://api.timezonedb.com/?zone=Europe/Oslo&format=json&key=WTU4LLBZ20OF")
+		.done(function(json){
+			console.log(json);
+			var time = json.timestamp;
+			
+			var newtime = new Date(time*1000).toUTCString();  
+			$("#zone").html(newtime);
+		});
+		
 
-		$.get("https://api.xmltime.com/timeservice?accesskey=6jufFqFitK&expires=2016-05-22T21%3A46%3A27%2B00%3A00&signature=rQAEL0FS9IVcNarGyeg1dDDx98A%3D&version=2&placeid=norway%2Foslo&geo=0&sun=0&timechanges=0&tz=0&verbosetime=0")
 }
 </script>
 
 
-<div id="answer"> 
+<div id="answer"> </div>
+<div id="zone"> </div>
 
-</div>
+
 
 <script>
 
@@ -87,7 +97,7 @@ setInterval(function(){ checkForAnswer(); }, 3000);
     Question: <input type="text" name="app_ques" id="app_ques"> </input><br>
     
     <button onclick="askQuestion();">Ask Question</button> 
-	<button onclick="sendToDatabase()">Get Local time in Norway!</button>
+	<button onclick="sendToDatabase();">Get Local time in Norway!</button>
     
     
     
