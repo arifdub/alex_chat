@@ -20,15 +20,7 @@ else if($type == 'gotAnswer'){
 
 function checkQuestionStatus(){
     
-    // database connection
-      try {
-        $host = '127.0.0.1';
-        $dbname = 'test';
-        $user = 'root';
-        $pass = 'doa24710';
-        # MySQL with PDO_MYSQL
-        $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    } catch(PDOException $e) {echo $e;}  
+    include("dbconnection.php");
     
     $id = $_POST['id'];
     
@@ -46,15 +38,7 @@ function checkQuestionStatus(){
 
 function gotAnswer(){
     
-    // database connection
-      try {
-        $host = '127.0.0.1';
-        $dbname = 'test';  
-        $user = 'root';
-        $pass = 'doa24710';
-        # MySQL with PDO_MYSQL
-        $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    } catch(PDOException $e) {echo $e;}  
+    include("dbconnection.php");
     
     $id = $_POST['id'];
     
@@ -74,15 +58,7 @@ function submitNewQuestion(){
     $name =  $_POST['app_name'];
     $question = $_POST['app_ques'];
     
-    // database connection
-      try {
-        $host = '127.0.0.1';
-        $dbname = 'test';
-        $user = 'root';
-        $pass = 'doa24710';
-        # MySQL with PDO_MYSQL
-        $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    } catch(PDOException $e) {echo $e;}  
+    include("dbconnection.php");
 
 
     
